@@ -308,3 +308,8 @@ with col3:
     st.info("**Model Performance**: Neural network achieves >94% accuracy on test data")
 
 st.markdown("© 2024 Iris Dataset Analysis Dashboard")
+
+st.write("\n Dataset Info:")
+st.write(df.info())  # Display dataset information
+
+st.write("\n Missing data from the datasets:", df.isnull().sum())  # Display missing data
