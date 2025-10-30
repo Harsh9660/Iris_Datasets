@@ -6,6 +6,7 @@ import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt 
 import seaborn as sns
+import plotly.express as px
 
 path = "Iris.csv"
 
