@@ -35,7 +35,6 @@ num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
 
 df[num_cols] = scaler.fit_transform(df[num_cols])
 
-
 X = df.drop(target_col, axis=1)
 y = df[target_col] 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -45,12 +44,9 @@ print(" Training set shape:", X_train.shape)
 print(" Test set shape:", X_test.shape)
 
 
-
-
 fig1 = px.histogram(df, x=target_col, title='Distribution of Species', color_discrete_sequence=['teal'])
 fig1.update_layout(title_x=0.5)
 fig1.show()
-
 
 
 corr = df.corr(numeric_only=True)
